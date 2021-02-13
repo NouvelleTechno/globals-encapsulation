@@ -17,4 +17,3 @@ $cookies = $globals->getCOOKIE();
 
 $id = Get::key("id");
 
-var_dump($id);
