@@ -15,9 +15,8 @@ class Globals{
     public function getGET($key = null){
         if(null !== $key){
             return $this->GET[$key] ?? null;
-        }else{
-            return $this->GET;
         }
+        return $this->GET;
     }
 
     public function getPOST($key = null){
