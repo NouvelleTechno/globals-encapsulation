@@ -11,6 +11,6 @@ $name = $globals->getPOST("name");
 
 if(!empty($post)){
     if(isset($post["name"]) && !empty($post["name"])){
-        echo $post["name"];
+        // echo $post["name"];
     }
 }

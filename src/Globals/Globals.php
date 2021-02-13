@@ -5,12 +5,14 @@ class Globals{
     private $GET;
     private $POST;
     private $SERVER;
+    private $COOKIE;
 
     public function __construct()
     {
         $this->GET = filter_input_array(INPUT_GET) ?? null;
         $this->POST = filter_input_array(INPUT_POST) ?? null;
         $this->SERVER = filter_input_array(INPUT_SERVER) ?? null;
+        $this->COOKIE = filter_input_array(INPUT_COOKIE) ?? null;
     }
 
     public function getGET($key = null){
@@ -32,5 +34,12 @@ class Globals{
             return $this->SERVER[$key] ?? null;
         }
         return $this->SERVER;
+    }
+
+    public function getCOOKIE($key = null){
+        if(null !== $key){
+            return $this->COOKIE[$key] ?? null;
+        }
+        return $this->COOKIE;
     }
 }
