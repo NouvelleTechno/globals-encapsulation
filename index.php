@@ -1,5 +1,6 @@
 <?php
 
+use App\Globals\Get;
 use App\Globals\Globals;
 
 require_once "vendor/autoload.php";
@@ -13,3 +14,7 @@ $cleanedGET = array_map("strip_tags", $get);
 $method = $globals->getSERVER("REQUEST_METHOD");
 
 $cookies = $globals->getCOOKIE();
+
+$id = Get::key("id");
+
+var_dump($id);
