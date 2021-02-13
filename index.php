@@ -10,6 +10,8 @@ $get = $globals->getGET();
 
 $cleanedGET = array_map("strip_tags", $get);
 
-$method = $_SERVER["REQUEST_METHOD"];
+$method = $globals->getSERVER("REQUEST_METHOD");
+
+echo $method;
 
 $cookies = $_COOKIE;
